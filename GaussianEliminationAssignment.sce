@@ -1,21 +1,20 @@
-//GAUSSIAN ELIMINATION
-/*
-2x-y=1
--x+2y-z=1
--y+2z=1
-*/
-//clc;clear;close;
-disp('Gaussian Elimination')
-disp('Solve the equations with x,y,z as unknowns')
-disp('4x+y+2z=1')
-disp('-3x+6y-2z=3')
-disp('-7y+3z=8')
-A=[4,1,2;-3,6,-2;0,-7,3],b=[1;3;8]
+disp('GAUSSIAN ELIMINATION')
+n=input("Enter n value")
+for i=1:n
+    for j=1:n
+        A(i,j)=input("Enter elements for matrix A")
+    end
+end
+disp("enter elements for matrix b")
+for i=1:n
+    b(i)=input("enter element")
+end
 A_aug=[A b]
 a=A_aug
 disp('Augmented Matrix')
 disp(a)
 n=3;
+//TO OBTAIN THE COEFFICIENTS
 for i=2:n
     for j=2:n+1
         a(i,j)=a(i,j) - a(1,j) * a(i,1)/a(1,1);
