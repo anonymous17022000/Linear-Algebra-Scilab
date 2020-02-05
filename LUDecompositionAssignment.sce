@@ -1,8 +1,13 @@
-disp('LU Decomposition of a matrix')
-A=[1 4 5; 3 8 9; 2 7 6]
+n=input("Enter n value")
+for i=1:n
+    for j=1:n
+        A(i,j)=input("Enter elements for matrix A")
+    end
+end
 U=A;
 disp(A)
 m=det (U ( 1,1) );
+disp(m)
 n=det (U (2,1) );
 a=n/m;
 U(2,:)=U(2,:)-U(1,:)/(m/n)
